@@ -1,0 +1,23 @@
+<h1 class="title" role="heading">Store Products</h1>
+
+<div class="container" role="main">
+  <mat-card role="contentinfo" *ngFor="let bean of beans">
+
+    <mat-card-header role="columnheader">
+      <mat-card-title aria-label="title">{{bean.flavorName}}</mat-card-title>
+      <mat-card-subtitle aria-describedby="title">{{bean.description}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="bean.image" alt="Bean" width="200px" height="150px">
+
+    <mat-card-content role="contentinfo">
+      <span>GlutenFree: {{ (bean.glutenFree)? "Yes" : "No" }}</span>
+      <span>SugarFree: {{ (bean.sugarFree)? "Yes" : "No" }}</span>
+      <span>Seasonal: {{ (bean.seasonal)? "Yes" : "No" }}</span>
+      <span>Kosher: {{ (bean.kosher)? "Yes" : "No" }}</span>
+      <p>{{bean.ingredients}}</p>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

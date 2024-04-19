@@ -1,0 +1,22 @@
+.toolbar {
+  background-color: #D1BB9E;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.toolbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  box-shadow: 0px 0px 10px 2px #A79277;
+  z-index: -1;
+}
+
+.toolbar__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
